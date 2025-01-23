@@ -233,6 +233,47 @@ let str12 = z2.toString();
 console.log(num16); // 1
 console.log(str12); // "true"
 
+// arithmatic operations conversion
+
+let num17 = 10;
+let num18 = "20";
+let sum2 = num17 + num18;
+console.log(sum2); // 1020 why? because the value of num17 is a number and the value of num18 is a string.
+
+let num19 = 10;
+let num20 = "20";
+let sum3 = num19 + Number(num20);
+console.log(sum3); // 30 why? because the value of num19 is a number and the value of num20 is a string.
+
+let num21 = 10;
+let num22 = "20";
+let sum4 = Number(num21) + Number(num22);
+console.log(sum4); // 30 why? because the value of num21 and num22 are numbers.
+
+let num23 = 10;
+let num24 = "20";
+let sum5 = num23 + parseInt(num24);
+console.log(sum5); // 30 why? because the value of num23 is a number and the value of num24 is a string.
+
+let num25 = 10;
+let num26 = "20";
+let sum6 = num25 + parseFloat(num26);
+console.log(sum6); // 30 why? because the value of num25 is a number and the value of num26 is a string.S
+
+let num27 = 10;
+let num28 = "20";
+let sum7 = num27 + +num28; // +num28 is equivalent to Number(num28)
+console.log(sum7); // 30 why? because the value of num27 is a number and the value of num28 is a string.
+
+let num29 = 10;
+let num30 = "20";
+let sum8 = num29 + -num30; // -num30 is equivalent to -Number(num30)
+console.log(sum8); // -10 why? because the value of num29 is a number and the value of num30 is a string.
+
+let num31 = 10;
+let num32 = "20";
+let sum9 = num31 + !!num32; // !!num32 is equivalent to Boolean(num32)
+console.log(sum9); // 11 why? because the value of num31 is a number and the value of num32 is a string.
 
 
 
