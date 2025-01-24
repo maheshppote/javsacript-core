@@ -1,11 +1,12 @@
 // let's discuss about data types in JavaScript step by step i simple terms.
 
-// 1. Number
-// 2. String
-// 3. Boolean
-// 4. Undefined
-// 5. Null
-// 6. Object
+// 1. Number, Means numeric values.
+// 2. String , Means textual data.
+// 3. Boolean , Means true or false.
+// 4. Undefined , Means undefined value.
+// 5. Null , Means null value.
+// 6. Object , Means complex data structures.
+// 7. Symbol , Means unique identifiers.
 
 // 1. Number
 // Number data type is used to represent numeric values.
