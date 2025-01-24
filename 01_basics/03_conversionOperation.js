@@ -19,14 +19,15 @@ console.log(sum); // 1020
 // 1. Number()
 // The Number() function converts a value to a number.
 let str = "10";
-let num = Number(str);
-console.log(num); // 10
+let num = Number(str); // convert string to number
+console.log(num); // 10 , why? because the value of str is a string.
 
 // 2. String()
 // The String() function converts a value to a string.
 let numString = 10;
-let strString = String(numString);
-console.log(strString); // "10"
+let strString = String(numString); // convert number to string
+console.log(strString); // "10" , why? because the value of numString is a number.
+console.log(typeof strString); // string, why? because the value of strString is a string.
 
 // 3. Boolean()
 // The Boolean() function converts a value to a boolean.
@@ -41,18 +42,19 @@ console.log(bool); // true
 // Example 1: Implicit Conversion
 let num3 = 10;
 let num4 = "20";
-let sum1 = num3 + num4;
-console.log(sum1); // 1020
+let sum1 = num3 + num4; // num3 is a number and num4 is a string
+console.log(sum1); // 1020,  why? because the value of num3 is a number and the value of num4 is a string.
 
 // Example 2: Explicit Conversion
 let str1 = "10";
-let num5 = Number(str1);
-console.log(num5); // 10
+let num5 = Number(str1); // convert string to number    
+console.log(num5); // 10 , why? because the value of str1 is a string.
+console.log(typeof num5); // number, why? because the value of num5 is a number.
 
 // Example 3: Explicit Conversion
 let numString1 = 10;
 let strString1 = String(numString1);
-console.log(strString1); // "10"
+console.log(strString1); // "10" , why? because the value of numString1 is a number.
 
 // Example 4: Explicit Conversion
 let x1 = 10;
@@ -274,8 +276,3 @@ let num31 = 10;
 let num32 = "20";
 let sum9 = num31 + !!num32; // !!num32 is equivalent to Boolean(num32)
 console.log(sum9); // 11 why? because the value of num31 is a number and the value of num32 is a string.
-
-
-
-
-

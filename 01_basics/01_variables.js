@@ -24,22 +24,25 @@ console.log(getAccountHolderCity()); // New York
 
 // provide an example of above differences
 // hoisting
-console.log(a); // undefined
+console.log(a); // undefined. why? because var a is hoisted; means it is declared at the top of the scope but not initialized yet 
 var a = 1;
 console.log(a); // 1 
+
+console.log(fullName); // error. why? because let fullName is not hoisted; means it is not declared at the top of the scope 
+let fullName = 'Mahesh pote'
 
 // redeclaration
 var b = 2;
 var b = 3; // no error
 let c = 4;
-// let c = 5; // error
+//let c = 5; // error
 
 // reassignment
 var d = 6;
 d = 7; // no error
 
 let e = 8;
-e = 9; // no error
+e = 9; // no error. 
 
 // global
 var f = 10;

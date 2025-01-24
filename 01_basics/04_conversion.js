@@ -4,6 +4,7 @@ console.log("2" > 1); // true. WHY ? because "2" is converted to 2 and then comp
 console.log("2" < "12"); // false. WHY ? because "2" is compared with "12" character by character.
 
 console.log("02" > 1); // true. WHY ? because "02" is converted to 2 and then compared with 1.
+console.log(2 > "1"); // true. WHY ? because "1" is converted to 1 and then compared with 2.
 
 console.log(true == 1); // true. WHY ? because true is converted to 1 and then compared with 1.
 console.log(false == 0); // true. WHY ? because false is converted to 0 and then compared with 0.
