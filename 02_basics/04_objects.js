@@ -29,20 +29,27 @@ let obj2 = {
 // console.log(obj2.Car.company.location)
 
 const userDetails = {
-    name : "Mahesh",
-    email : "mpote97@gmail.com",
-    age: 35
-}
+  name: "Mahesh",
+  email: "mpote97@gmail.com",
+  age: 35,
+};
 
 const compdetails = {
-    cname : "Synechron",
-    location : "pune",
-    account : "APAC"
-}
+  cname: "Synechron",
+  location: "pune",
+  account: "APAC",
+};
 
-const EmpFullDetails = {...userDetails, ...compdetails}
-console.log(EmpFullDetails)
+const EmpFullDetails = { ...userDetails, ...compdetails };
+// console.log(EmpFullDetails)
 
-console.log(Object.keys(EmpFullDetails));
+// console.log(Object.keys(EmpFullDetails));
 
-console.log(Object.values(EmpFullDetails))
+// console.log(Object.values(EmpFullDetails))
+
+// Destructuring --------------------
+let { cname, location, account } = EmpFullDetails;
+
+console.log(location);
+console.log(cname);
+console.log(account);
