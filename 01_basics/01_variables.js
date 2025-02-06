@@ -17,7 +17,7 @@ console.log(getAccountHolderCity()); // New York
 
 // what is the difference between var and let?
 // var is function scoped, let is block scoped
-// var is hoisted, let is not
+// var is hoisted, let is not but it is TDZ temporary dead zone
 // var can be redeclared, let cannot
 // var can be reassigned, let can be reassigned
 // var is global, let is not
