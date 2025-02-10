@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3748;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+  
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  nav a {
+    display: inline-block;
+    min-width: 9rem;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    border: solid 2px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  nav a[aria-current='page'] {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  #wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slideDown 0.5s ease-out;
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #guess {
+    font-size: 1.2rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+  }
+  
+  .guessField {
+    padding: 1rem;
+    width: 200px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+  
+  .guessField:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  }
+  
+  .guessSubmit {
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .guessSubmit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .result {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 2rem;
+    animation: fadeIn 0.5s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .guesses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1rem 0;
+  }
+  
+  .guess-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-weight: 600;
+    color: white;
+    animation: popIn 0.3s ease-out;
+  }
+  
+  @keyframes popIn {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .guess-badge.very-close {
+    background: linear-gradient(135deg, #48bb78 0%, #38a169 100%);
+    box-shadow: 0 2px 10px rgba(72, 187, 120, 0.2);
+  }
+  
+  .guess-badge.close {
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+    box-shadow: 0 2px 10px rgba(66, 153, 225, 0.2);
+  }
+  
+  .guess-badge.far {
+    background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
+    box-shadow: 0 2px 10px rgba(237, 137, 54, 0.2);
+  }
+  
+  .guess-badge.very-far {
+    background: linear-gradient(135deg, #e53e3e 0%, #c53030 100%);
+    box-shadow: 0 2px 10px rgba(229, 62, 62, 0.2);
+  }
+  
+  .lastResult {
+    color: #667eea;
+    font-weight: 600;
+  }
+  
+  .loworhigh h2 {
+    color: #4a5568;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    animation: bounce 0.5s ease;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .button {
+    margin-top: 2rem;
+  }
+  
+  #newGame {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  #newGame:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
