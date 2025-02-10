@@ -7,7 +7,7 @@ console.log("Hello, " + userName + "!");
 let a = NaN;
 let b = NaN;
 
-console.log(a === b); // false (NaN is never equal to NaN)
+console.log(a === b); // false (NaN is never equal to NaN) 
 console.log(a === b); // false (NaN is never equal to NaN)
 
 console.log(a !== b); // true (NaN is never equal to NaN)
